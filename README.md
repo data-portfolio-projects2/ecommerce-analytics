@@ -7,4 +7,5 @@ Develop an end-to-end e-commerce BI pipeline that extracts and transforms databa
 
 <img width="946" height="776" alt="image" src="https://github.com/user-attachments/assets/f9bc403f-aa76-4364-8cca-8c4d3dfb5e4e" />
 
-  
+
+file:///C:/Users/loydt/Downloads/E-Commerce%20BI%20Project%20%E2%80%93%20Target%20KPIs%20for%20Dashboard%20Visualization.pdf
