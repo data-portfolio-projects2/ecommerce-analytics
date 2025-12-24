@@ -1,7 +1,6 @@
 # E-Commerce BI Project – Analysis & Target KPIs Summary
 
 ### E‑Commerce Database Schema
-[![Database Schema]([https://dbdiagram.io/api/image/embedded/e-commerce-database-design-6947f7a74bbde0fd74ed312c.svg)](https://dbdiagram.io/d/e-commerce-database-design-6947f7a74bbde0fd74ed312c](https://dbdiagram.io/d/E-Commerce-BI-Star-Schema-6949fd1861d95806cf3d52fe))
 
 <img width="1143" height="841" alt="image" src="https://github.com/user-attachments/assets/bb24f8ba-2d99-4f3d-ada5-c129ba9a69c5" />
 
