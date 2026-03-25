@@ -64,4 +64,16 @@ HAVING COUNT(order_id) > 1;
 ```
 <img width="346" height="154" alt="image" src="https://github.com/user-attachments/assets/33d644af-ff19-44c5-8a76-4d66dd877d32" />
 
+---
+```sql
+SELECT customer_name, customer_id, 
+	ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY customer_name)
+FROM public.ecommerce_raw_data
+WHERE customer_id IN (
+	'CUST46773',
+	'CUST60479',
+	'CUST87553',
+	'CUST61574'
+)
+```
 
