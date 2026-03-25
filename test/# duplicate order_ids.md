@@ -19,7 +19,7 @@ WHERE order_id IN (
 <br/>
 <br/>
 
-**Solution:
+**Solution:**
 - Delete the order_ids from dim table first
 
 ```sql
@@ -38,7 +38,7 @@ WHERE order_id IN (
 
 <br/>
 
-**Create a new order_id for the duplicates. Make sure to check the new values don't have any match to the existing ids
+**Create a new order_id for the duplicates. Make sure to check the new values don't have any match to the existing ids**
 
 ```sql
 UPDATE public.ecommerce_raw_data
@@ -54,7 +54,7 @@ WHERE customer_name IN ('Rita Gray', 'Melissa Clark', 'Christopher Peterson', 'C
 
 <br/>
 
-**Verify if duplicates still exist
+**Verify if duplicates still exist**
 
 ```sql
 SELECT order_id, COUNT(order_id) count
