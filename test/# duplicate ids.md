@@ -7,7 +7,7 @@ Such data must be rejected and prevented from entering the pipeline until resolv
 
 ---
 
-# duplicate order_ids
+```# duplicate order_ids```
 
 [Documentation](https://docs.google.com/spreadsheets/d/1usE6K1QZ8LC31iKjGDv3JenrbP2B1voX-foIb8rPyxg/edit?gid=0#gid=0)
 
