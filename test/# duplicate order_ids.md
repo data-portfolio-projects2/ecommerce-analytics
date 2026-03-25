@@ -17,6 +17,7 @@ WHERE order_id IN (
 <img width="269" height="247" alt="image" src="https://github.com/user-attachments/assets/8b60f248-4863-468d-bd0d-66bae832be58" />
 
 <br/>
+<br/>
 
 Solution:
 - Delete the order_ids from dim table firts
