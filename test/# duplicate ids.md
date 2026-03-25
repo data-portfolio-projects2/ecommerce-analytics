@@ -93,7 +93,7 @@ WHERE customer_id IN (
 	'CUST61574'
 )
 ```
-<img width="347" height="246" alt="image" src="https://github.com/user-attachments/assets/2851999b-a369-44c7-bf74-d292b182e571" />.
+<img width="347" height="246" alt="image" src="https://github.com/user-attachments/assets/2851999b-a369-44c7-bf74-d292b182e571" />
 
 ---
 <br/>
@@ -139,6 +139,7 @@ WHERE product_id IN (
 ```
 <img width="422" height="315" alt="image" src="https://github.com/user-attachments/assets/9a4cb6f2-5c0e-4899-9cb2-e73611c213f7" />
 
+<br/>
 <br/>
 
 ```
