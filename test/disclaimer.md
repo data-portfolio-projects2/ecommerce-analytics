@@ -1,0 +1,4 @@
+Disclaimer:
+This example includes manual adjustments to key identifiers for demonstration purposes only. In real-world data engineering practices, modifying primary identifiers compromises data integrity and violates governance standards.
+
+Any occurrence of duplicate or invalid identifiers must trigger a data quality failure, requiring escalation to the upstream data source. Such data must be rejected and prevented from entering the pipeline until resolved at the source.
