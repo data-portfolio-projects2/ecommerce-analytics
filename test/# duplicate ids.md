@@ -1,9 +1,11 @@
-`Disclaimer:
+```
+Disclaimer:
 This example includes manual adjustments to key identifiers for demonstration purposes only. 
 In real-world data engineering practices, modifying primary identifiers compromises data integrity and violates governance standards.
 
 Any occurrence of duplicate or invalid identifiers must trigger a data quality failure, requiring escalation to the upstream data source. 
-Such data must be rejected and prevented from entering the pipeline until resolved at the source.`
+Such data must be rejected and prevented from entering the pipeline until resolved at the source.
+```
 
 ---
 
@@ -136,9 +138,10 @@ WHERE product_id IN (
 )
 ```
 <img width="422" height="315" alt="image" src="https://github.com/user-attachments/assets/9a4cb6f2-5c0e-4899-9cb2-e73611c213f7" />
-
-`This is where manual adjustment ends, and this goes to show that resolving duplicates at scale is not feasible—and becomes practically impossible—through SQL updates alone. 
+```
+This is where manual adjustment ends, and this goes to show that resolving duplicates at scale is not feasible—and becomes practically impossible—through SQL updates alone. 
 Modifying large volumes of records is not only risky but also unsustainable and unmanageable.
 
-Therefore, the dataset must be rejected and reported to the data source provider for investigation and correction at the source.`
+Therefore, the dataset must be rejected and reported to the data source provider for investigation and correction at the source.
+```
 
