@@ -35,6 +35,7 @@ WHERE order_id IN (
 	'ORDR68798'	
 )
 ```
+
 <br/>
 
 Create a new order_id for the duplicates. Make sure to check the new values don't have any match to the existing ids
@@ -50,3 +51,17 @@ SET order_id = CASE customer_name
 END 
 WHERE customer_name IN ('Rita Gray', 'Melissa Clark', 'Christopher Peterson', 'Corey Santos');
 ```
+
+<br/>
+
+verify if duplicates still exist
+
+```sql
+SELECT order_id, COUNT(order_id) count
+FROM public.ecommerce_raw_data
+GROUP BY order_id
+HAVING COUNT(order_id) > 1;
+```
+<img width="346" height="154" alt="image" src="https://github.com/user-attachments/assets/33d644af-ff19-44c5-8a76-4d66dd877d32" />
+
+
