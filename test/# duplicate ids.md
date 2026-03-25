@@ -73,6 +73,7 @@ HAVING COUNT(order_id) > 1;
 
 ---
 <br/>
+
 ```sql
 SELECT customer_name, customer_id, 
 	ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY customer_name)
