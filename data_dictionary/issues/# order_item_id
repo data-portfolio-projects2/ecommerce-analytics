@@ -1,1 +1,17 @@
+What: Using order_item_id as a uniqueness indicator is not sufficient to detect duplicates.
 
+  - A line-item timestamp (or other meaningful business attribute) should be used to enforce uniqueness and detect true duplicates.
+  - This ensures data integrity and avoids false positives in reporting and audits.
+
+What: The Issue with order_item_id as the sole uniqueness indicator
+
+      | order_id | order_item_id | product_id | price |
+      | -------- | ------------- | ---------- | ----- |
+      | ORD_001  | ITEM_001      | PROD_001   | 3000  |
+      | ORD_001  | ITEM_002      | PROD_001   | 3000  |
+
+If you only rely on order_item_id:
+
+  - Both rows are technically unique
+  - But from a business perspective, they might actually be duplicates (same product, same price)
+  - order_item_id creates a false positive, making it look like everything is fine when you may have an issue
