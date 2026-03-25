@@ -20,7 +20,7 @@ WHERE order_id IN (
 <br/>
 
 Solution:
-- Delete the order_ids from dim table firts
+- Delete the order_ids from dim table first
 
 ```sql
 DELETE FROM public.fact_orders
