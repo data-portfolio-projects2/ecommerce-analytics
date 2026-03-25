@@ -5,6 +5,10 @@ In real-world data engineering practices, modifying primary identifiers compromi
 Any occurrence of duplicate or invalid identifiers must trigger a data quality failure, requiring escalation to the upstream data source. 
 Such data must be rejected and prevented from entering the pipeline until resolved at the source.
 
+---
+
+# duplicate order_ids
+
 [Documentation](https://docs.google.com/spreadsheets/d/1usE6K1QZ8LC31iKjGDv3JenrbP2B1voX-foIb8rPyxg/edit?gid=0#gid=0)
 
 ```sql
@@ -73,6 +77,8 @@ HAVING COUNT(order_id) > 1;
 
 ---
 <br/>
+
+# duplicate customer_ids
 
 ```sql
 SELECT customer_name, customer_id, 
