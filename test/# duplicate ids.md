@@ -148,7 +148,23 @@ Modifying large volumes of records is not only risky but also unsustainable and 
 
 Therefore, the dataset must be rejected and reported to the data source provider for investigation and correction at the source.
 ```
+---
 
+```
+Remove all the data
+```
+```sql
+TRUNCATE TABLE
+	public.ecommerce_raw_data,
+	public.fact_campaign_daily,
+	public.fact_order_items,
+	public.fact_orders,
+	public.dim_campaign,
+	public.dim_channel,
+	public.dim_customer,
+	public.dim_date,
+	public.dim_product
+```
 
 
 
