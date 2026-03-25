@@ -35,3 +35,20 @@ WHERE order_id IN (
 	'ORDR68798'	
 )
 ```
+
+<br/>
+<br/>
+
+Create a new order_id for the duplicates. Make sure to check the new values don't have any match to the existing ids
+
+```sql
+UPDATE public.ecommerce_raw_data
+SET order_id = CASE customer_name
+	WHEN 'Rita Gray' THEN 'ORDR03237'
+	WHEN 'Melissa Clark' THEN 'ORDR19620'
+	WHEN 'Christopher Peterson' THEN 'ORDR68799'
+	WHEN 'Corey Santos' THEN 'ORDR47323'
+	ELSE order_id
+END 
+WHERE customer_name IN ('Rita Gray', 'Melissa Clark', 'Christopher Peterson', 'Corey Santos');
+```
