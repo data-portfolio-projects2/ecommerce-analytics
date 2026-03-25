@@ -72,6 +72,7 @@ HAVING COUNT(order_id) > 1;
 <img width="346" height="154" alt="image" src="https://github.com/user-attachments/assets/33d644af-ff19-44c5-8a76-4d66dd877d32" />
 
 ---
+<br/>
 ```sql
 SELECT customer_name, customer_id, 
 	ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY customer_name)
@@ -83,4 +84,5 @@ WHERE customer_id IN (
 	'CUST61574'
 )
 ```
+<img width="347" height="246" alt="image" src="https://github.com/user-attachments/assets/2851999b-a369-44c7-bf74-d292b182e571" />
 
