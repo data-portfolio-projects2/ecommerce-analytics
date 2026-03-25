@@ -1,9 +1,9 @@
-Disclaimer:
+`Disclaimer:
 This example includes manual adjustments to key identifiers for demonstration purposes only. 
 In real-world data engineering practices, modifying primary identifiers compromises data integrity and violates governance standards.
 
 Any occurrence of duplicate or invalid identifiers must trigger a data quality failure, requiring escalation to the upstream data source. 
-Such data must be rejected and prevented from entering the pipeline until resolved at the source.
+Such data must be rejected and prevented from entering the pipeline until resolved at the source.`
 
 ---
 
@@ -91,5 +91,54 @@ WHERE customer_id IN (
 	'CUST61574'
 )
 ```
-<img width="347" height="246" alt="image" src="https://github.com/user-attachments/assets/2851999b-a369-44c7-bf74-d292b182e571" />
+<img width="347" height="246" alt="image" src="https://github.com/user-attachments/assets/2851999b-a369-44c7-bf74-d292b182e571" />.
+
+---
+<br/>
+
+```# duplicate product_ids```
+
+```sql
+SELECT customer_name, product_id, 
+	ROW_NUMBER() OVER (PARTITION BY product_id ORDER BY customer_name)
+FROM public.ecommerce_raw_data
+WHERE product_id IN (
+	'PROD33618',
+	'PROD41517',
+	'PROD54028',
+	'PROD07623',
+	'PROD60486',
+	'PROD03799',
+	'PROD48674',
+	'PROD22061',
+	'PROD08395',
+	'PROD31540',
+	'PROD42677',
+	'PROD50698',
+	'PROD49761',
+	'PROD07722',
+	'PROD20247',
+	'PROD47691',
+	'PROD98725',
+	'PROD05904',
+	'PROD11190',
+	'PROD86547',
+	'PROD25885',
+	'PROD35378',
+	'PROD62605',
+	'PROD84894',
+	'PROD08549',
+	'PROD91018',
+	'PROD03362',
+	'PROD88867',
+	'PROD95313',
+	'PROD15852'
+)
+```
+<img width="422" height="315" alt="image" src="https://github.com/user-attachments/assets/9a4cb6f2-5c0e-4899-9cb2-e73611c213f7" />
+
+`This is where manual adjustment ends, and this goes to show that resolving duplicates at scale is not feasible—and becomes practically impossible—through SQL updates alone. 
+Modifying large volumes of records is not only risky but also unsustainable and unmanageable.
+
+Therefore, the dataset must be rejected and reported to the data source provider for investigation and correction at the source.`
 
