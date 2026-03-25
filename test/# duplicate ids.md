@@ -78,7 +78,7 @@ HAVING COUNT(order_id) > 1;
 ---
 <br/>
 
-# duplicate customer_ids
+```# duplicate customer_ids```
 
 ```sql
 SELECT customer_name, customer_id, 
